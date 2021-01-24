@@ -1,7 +1,7 @@
 package main
 
-import "fmt"
+import "github.com/mtslzr/dio/src/cmd"
 
 func main() {
-	fmt.Println("Dio")
+	cmd.Execute()
 }

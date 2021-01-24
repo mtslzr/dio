@@ -1,6 +1,6 @@
 BINARY="bin/dio"
 
-all: build test run
+all: build test
 
 clean:
 	rm -rf bin/*
