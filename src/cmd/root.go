@@ -4,15 +4,18 @@ import (
 	"fmt"
 	"os"
 
+	log "github.com/sirupsen/logrus"
 	"github.com/spf13/cobra"
 )
 
 var rootCmd = &cobra.Command{
 	Use: "dio",
 	Short: "Command-line tool to bootstrap new projects.",
-	Run: func(cmd *cobra.Command, args []string) {
-		fmt.Println("Dio!")
-	},
+}
+
+func init() {
+	log.SetOutput(os.Stdout)
+	log.SetLevel(log.WarnLevel)
 }
 
 // Executes runs the root command.
